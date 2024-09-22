@@ -1,0 +1,279 @@
+:root {
+  --color--surface-0: #d3ccea;
+  --color--surface-10: hsl(253, 8%, 20%);
+  --color--surface-20: hsl(253, 10%, 15%);
+  --color--surface-30: hsl(253, 10%, 10%);
+  --color--surface-40: hsl(253, 10%, 0%);
+
+  --color-on-surface: #cfcfcf;
+
+  --size--header-height: 8svh;
+  --size--footer-height: 4svh;
+
+  --horizontal-padding: 5svw;
+
+  --box-shadow: 0px 6px 9px 3px hsla(190, 50%, 25%, 0.25);
+
+  font-size: 16px;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+html, body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 0;
+  padding: 0;
+  min-width: 100svw; width: 100svw; max-width: 100svw;
+  min-height: 100svh; height: 100svh; max-height: 100svh;
+  background-color: white;
+  overflow: hidden;
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 100%; width: 100%; max-width: 100%;
+    min-height: var(--size--header-height); height: var(--size--header-height); max-height: var(--size--header-height);
+    background-color: #338899;
+    padding: 0 var(--horizontal-padding);
+
+    span, a {
+      text-decoration: none;
+      color: hsl(0, 0%, 100%);
+      margin: 0 auto;
+      text-transform: uppercase;
+      font-weight: 800;
+    }
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    min-width: 100%; width: 100%; max-width: 100%;
+    min-height: calc(100% - var(--size--header-height) - var(--size--footer-height)); height: calc(100% - var(--size--header-height) - var(--size--footer-height)); max-height: calc(100% - var(--size--header-height) - var(--size--footer-height));
+    background-color: white;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    padding: 0 var(--horizontal-padding);
+    padding-bottom: 32px;
+  }
+
+  footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 100%; width: 100%; max-width: 100%;
+    min-height: var(--size--footer-height); height: var(--size--footer-height); max-height: var(--size--footer-height);
+    background-color: #338899;
+
+    span, a {
+      text-decoration: none;
+      color: hsl(0, 0%, 100%);
+    }
+  }
+}
+
+/* h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+} */
+
+.app-icon {
+  width: 150px;
+  height: 150px;
+
+  path { fill: black; }
+  
+  /* SIZES */
+  &.icon-xs { width: 16px; height: 16px; }
+  &.icon-s  { width: 24px; height: 24px; }
+  &.icon-m  { width: 48px; height: 48px; }
+  &.icon-l  { width: 72px; height: 72px; }
+  &.icon-xl { width: 96px; height: 96px; }
+
+  /* COLORS */
+  &.icon-primary { path { fill: red; } }
+  &.icon-secondary { path { fill: blue; } }
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 12px;
+  margin: 0;
+  background-color: transparent;
+  border: none;
+  border-radius: 500px;
+  transition: background-color .2s linear, color .2s linear;
+  font-size: 14px;
+
+  /* &:active {
+    background-color: #cfcfcf;
+  } */
+
+  &.base-button {
+    background-color: #e7e7e7;
+    color: black;
+
+    & path {
+      fill: black;
+      transition: fill .2s linear;
+    }
+
+    &:active {
+      background-color: #b1b1b1;
+      color: black;
+
+      & path {
+        fill: black;
+      }
+    }
+  }
+}
+
+
+.recipe-card {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  min-width: 100%; width: 100%; max-width: 100%;
+  min-height: fit-content; height: fit-content; max-height: fit-content;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: var(--box-shadow);
+
+  .card-img-container {
+    min-width: 28%;
+    min-height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  img {
+    width: 33%;
+  }
+
+  .card-overview-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    padding: 8px 16px 8px 8px;
+
+    strong {
+      margin-bottom: 8px;
+    }
+  }
+}
+
+.recipes-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  gap: 24px;
+}
+
+.recipe-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  /* gap: 16px; */
+
+  .img-container {
+    min-width: 100%;
+    aspect-ratio: 4/3;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 8px;
+  }
+
+  .recipe-ingredients-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 8px;
+
+    .ingredient-bloc {
+      border: 2px solid hsl(189, 54%, 93%);
+      padding: 8px 8px;
+      border-radius: 8px;
+    }
+  }
+
+  .recipe-steps-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 16px;
+    padding-bottom: 32px;
+
+    .step-bloc {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 8px;
+
+      .step-number {
+        --diameter: 24px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: var(--diameter); width: var(--diameter); max-width: var(--diameter);
+        min-height: var(--diameter); height: var(--diameter); max-height: var(--diameter);
+        background-color: #000000;
+        color: #ffffff;
+        font-size: 12px;
+        font-weight: 600;
+        border-radius: 500px;
+      }
+    }
+
+    .tips-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      width: 90%;
+      margin: 0 auto;
+      padding: 8px 16px;
+
+      font-size: 12px;
+      background-color: hsl(30, 100%, 95%);
+      border-radius: 8px;
+    }
+  }
+}
+
+.timing-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 4px;
+
+  .timing-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid hsl(189, 54%, 93%);
+    padding: 4px 8px;
+    border-radius: 8px;
+  }
+}
