@@ -60,16 +60,34 @@ export const getRecipeCompleteIhm = (recipe) => {
       <p>${recipe.desc}</p>
       <h4>Durée</h4>
       <div class="timing-container">
+      ${
+        recipe.prepTime != 0 
+        ? `
         <div class="timing-line">
           ${getSvgIcon('clock', 'icon-xs')}
           <span>Préparation</span>
           <span>${recipe.prepTime}min</span>
-        </div>
+        </div>` : '' 
+      }
+      
+      ${
+        recipe.restTime != 0 
+        ? `
+        <div class="timing-line">
+          ${getSvgIcon('clock', 'icon-xs')}
+          <span>Repos</span>
+          <span>${recipe.restTime}min</span>
+        </div>` : '' 
+      }
+      ${
+        recipe.cookingTime != 0 
+        ? ` 
         <div class="timing-line">
           ${getSvgIcon('clock', 'icon-xs')}
           <span>Cuisson</span>
           <span>${recipe.cookingTime}min</span>
-        </div>
+        </div>` : '' 
+      }
       </div>
       <h4>Ingrédients</h4>
       ${getRecipeIngredientsIhm(recipe.ingredients)}
@@ -85,16 +103,34 @@ export const getRecipeOverviewCard = (recipe) => {
     <div class="card-overview-text">
       <strong>${recipe.name}</strong>
       <div class="timing-container">
-        <div class="timing-line">
-          ${getSvgIcon('clock', 'icon-xs')}
-          <span>Préparation</span>
-          <span>${recipe.prepTime}min</span>
-        </div>
-        <div class="timing-line">
-          ${getSvgIcon('clock', 'icon-xs')}
-          <span>Cuisson</span>
-          <span>${recipe.cookingTime}min</span>
-        </div>
+        ${
+          recipe.prepTime != 0 
+          ? `
+          <div class="timing-line">
+            ${getSvgIcon('clock', 'icon-xs')}
+            <span>Préparation</span>
+            <span>${recipe.prepTime}min</span>
+          </div>` : '' 
+        }
+        
+        ${
+          recipe.restTime != 0 
+          ? `
+          <div class="timing-line">
+            ${getSvgIcon('clock', 'icon-xs')}
+            <span>Repos</span>
+            <span>${recipe.restTime}min</span>
+          </div>` : '' 
+        }
+        ${
+          recipe.cookingTime != 0 
+          ? ` 
+          <div class="timing-line">
+            ${getSvgIcon('clock', 'icon-xs')}
+            <span>Cuisson</span>
+            <span>${recipe.cookingTime}min</span>
+          </div>` : '' 
+        }
       </div>
     </div>
   </div>`;
@@ -108,16 +144,34 @@ export const getRecipePromotedCard = (recipe) => {
       <strong>${recipe.name}</strong>
       <p>${recipe.smDesc}</p>
       <div class="timing-container">
+      ${
+        recipe.prepTime != 0 
+        ? `
         <div class="timing-line">
           ${getSvgIcon('clock', 'icon-xs')}
           <span>Préparation</span>
           <span>${recipe.prepTime}min</span>
-        </div>
+        </div>` : '' 
+      }
+      
+      ${
+        recipe.restTime != 0 
+        ? `
+        <div class="timing-line">
+          ${getSvgIcon('clock', 'icon-xs')}
+          <span>Repos</span>
+          <span>${recipe.restTime}min</span>
+        </div>` : '' 
+      }
+      ${
+        recipe.cookingTime != 0 
+        ? ` 
         <div class="timing-line">
           ${getSvgIcon('clock', 'icon-xs')}
           <span>Cuisson</span>
           <span>${recipe.cookingTime}min</span>
-        </div>
+        </div>` : '' 
+      }
       </div>
     </div>
   </div>`;
