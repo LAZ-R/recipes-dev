@@ -40,4 +40,4 @@ MAIN.innerHTML = `
 `;
 
 FOOTER.innerHTML = `
-  <span>&copy; <a href="https://laz-r.github.io/">laz_R</a> - ${new Date().getFullYear()} - v ${APP_VERSION}</span>`;
+  <span>&copy; <a href="https://laz-r.github.io/">laz_R</a> - ${new Date().getFullYear()} - v ${APP_VERSION}</span> <div style="margin-left: 8px;" onclick="window.location = window.location">${getSvgIcon('arrows-rotate', 'icon-xxs icon-white')}</div>`;

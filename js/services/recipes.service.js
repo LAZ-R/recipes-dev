@@ -74,7 +74,7 @@ export const getRecipeCompleteIhm = (recipe) => {
       <h4>Ingrédients</h4>
       ${getRecipeIngredientsIhm(recipe.ingredients)}
       <h4>Étapes de préparation</h4>
-      ${getRecipeStepsIhm(recipe.steps)}
+      ${getRecipeStepsIhm(recipe.steps)} 
     </div>`;
 }
 

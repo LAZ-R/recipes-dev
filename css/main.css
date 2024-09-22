@@ -92,15 +92,17 @@ html, body {
   path { fill: black; }
   
   /* SIZES */
-  &.icon-xs { width: 16px; height: 16px; }
-  &.icon-s  { width: 24px; height: 24px; }
-  &.icon-m  { width: 48px; height: 48px; }
-  &.icon-l  { width: 72px; height: 72px; }
-  &.icon-xl { width: 96px; height: 96px; }
+  &.icon-xxs { width: 12px; height: 12px; }
+  &.icon-xs  { width: 16px; height: 16px; }
+  &.icon-s   { width: 24px; height: 24px; }
+  &.icon-m   { width: 48px; height: 48px; }
+  &.icon-l   { width: 72px; height: 72px; }
+  &.icon-xl  { width: 96px; height: 96px; }
 
   /* COLORS */
   &.icon-primary { path { fill: red; } }
   &.icon-secondary { path { fill: blue; } }
+  &.icon-white { path { fill: white; } }
 }
 
 button {
@@ -148,19 +150,15 @@ button {
   min-width: 100%; width: 100%; max-width: 100%;
   min-height: fit-content; height: fit-content; max-height: fit-content;
   border-radius: 8px;
-  overflow: hidden;
   box-shadow: var(--box-shadow);
 
   .card-img-container {
     min-width: 28%;
     min-height: 100%;
+    border-radius: 8px 0 0 8px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-  }
-  
-  img {
-    width: 33%;
   }
 
   .card-overview-text {
