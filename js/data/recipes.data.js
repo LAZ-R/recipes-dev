@@ -89,6 +89,7 @@ export const RECIPES = [
       { type: "STEP", value: "Coupe le poulet en dès." },
       { type: "STEP", value: "Coupe les aubergines pois en 4." },
       { type: "STEP", value: "Fais cuire le lait de coco dans une poêle chaude, puis ajoute la pate, mélange et attend que la graisse remonte." },
+      { type: "TIPS", value: "Avec le lait de coco industriel, il est possible qu'il n'y ai pas suffisement de graisse.<br>N'hésite pas à ajouter un peu d'huile dans la poêle si c'est le cas. Mais attention, huile d'olive interdite !" },
       { type: "STEP", value: "Ajoute le poulet et laisse mijoter quelques minutes." },
       { type: "STEP", value: "Ajoute les aubergines pois, une pincée de sel, le sucre de palmier et la fish sauce, mélange puis laisse reposer quelques minutes." },
       { type: "TIPS", value: "Fais tremper les aubergines pois préalablement dans de l'eau, pour qu'elles se ramollissent et cuisent plus vite." },

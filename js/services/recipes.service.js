@@ -14,7 +14,7 @@ export const getLatestRecipe = () => {
 export const getTipsIhm = (tips) => {
   return `
     <div class="tips-container">
-      <span>💡 Mon petit tips</span>
+      <span>💡 Mon petit tip</span>
       <p>${tips.value}</p>
     </div>
   `;
